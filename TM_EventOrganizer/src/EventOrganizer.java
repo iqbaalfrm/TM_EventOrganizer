@@ -8,7 +8,7 @@ public class EventOrganizer {
     private String CustEmail;
     private String CustPhone;
 
-
+    //Getter and Setter
     public int getCustId() {
         return CustId;
     }
@@ -49,10 +49,12 @@ public class EventOrganizer {
         CustPhone = custPhone;
     }
 
+    //Constructor tanpa parameter
     public EventOrganizer() {
 
     }
 
+    //Constructor dengan parameter
     public EventOrganizer(int custId, String custName, String custAddr, String custEmail, String custPhone) {
     this.CustId = custId;
     this.CustName = custName;
@@ -61,6 +63,7 @@ public class EventOrganizer {
     this.CustPhone = custPhone;
     }
 
+    //Method PrintGuests
     public void PrintGuests(ArrayList<EventOrganizer> guests){
         for (EventOrganizer guest : guests){
             System.out.println("======= Daftar Tamu =======");
