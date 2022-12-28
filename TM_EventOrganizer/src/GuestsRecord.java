@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class GuestsRecord {
     public static void main(String[] args) {
         Scanner Input = new Scanner(System.in);
+        //Membuat ArrayList
         ArrayList<EventOrganizer> guests = new ArrayList<>();
         System.out.println("Masukan Jumlah Tamu Undangan : ");
         int Jumlah_Tamu = Input.nextInt();
@@ -21,11 +22,14 @@ public class GuestsRecord {
             System.out.println("Masukan Nomor HP : ");
             String phone = Input.nextLine();
             System.out.println("");
-
+            
+            //Mencetak Objek EventOrganizer
             EventOrganizer guest = new EventOrganizer(id, name,addr,email,phone);
-
+            
+            //Menambahkan Inputan Ke Arraylist
             guests.add(guest);
-
+            
+            //Mencetak Tamu yang Diinput 
             System.out.println("");
             EventOrganizer eventOrganizer = new EventOrganizer(0 , "", "", "", "");
             eventOrganizer.PrintGuests(guests);
